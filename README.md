@@ -37,14 +37,14 @@ A simple login/authentication system built with the MERN (MongoDB, Express.js, R
 
 ## Usage
 
-    Open your browser and navigate to http://localhost:3000.
-    Register a new user.
-    Log in with the registered user credentials.
+. Open your browser and navigate to http://localhost:3000.
+. Register a new user.
+. Log in with the registered user credentials.
 
 ## Technologies Used
 
 React
-Tailwind CSS
+TailwindCSS
 Node.js
 Express.js
 MongoDB
