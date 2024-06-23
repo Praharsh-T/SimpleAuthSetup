@@ -19,6 +19,7 @@ function LoginPage() {
       const { success, message } = response.data;
       if (success) {
         console.log("LOGINSUCCESSFUL");
+        alert("LOGINSUCCESSFUL");
       } else {
         console.log(message);
       }
@@ -44,7 +45,7 @@ function LoginPage() {
       />
 
       <div className='bg-white flex flex-col justify-center items-center w-5/12 shadow-lg'>
-        <h1 className='text-3xl font-bold text-orange-500 mb-2'>LOGIN</h1>
+        <h1 className='text-3xl font-bold text-blue-500 mb-2'>LOGIN</h1>
         <div className='w-1/2 text-center'>
           <form onSubmit={handleLoginSubmit}>
             <input
@@ -53,7 +54,7 @@ function LoginPage() {
               placeholder='Username'
               value={loginData.username}
               onChange={handleLoginChange}
-              className='shadow-md border w-full h-10 px-3 py-2 text-orange-500 focus:outline-none focus:border-orange-500 mb-3 rounded'
+              className='shadow-md border w-full h-10 px-3 py-2 text-blue-500 focus:outline-none focus:border-blue-500 mb-3 rounded'
             />
             <input
               type='password'
@@ -61,18 +62,23 @@ function LoginPage() {
               placeholder='Password'
               value={loginData.password}
               onChange={handleLoginChange}
-              className='shadow-md border w-full h-10 px-3 py-2 text-orange-500 focus:outline-none focus:border-orange-500 mb-3 rounded'
+              className='shadow-md border w-full h-10 px-3 py-2 text-blue-500 focus:outline-none focus:border-blue-500 mb-3 rounded'
             />
             <button
               type='submit'
-              className='bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-lg focus:outline-none shadow'>
+              className='bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-lg focus:outline-none shadow'>
               Sign In
             </button>
           </form>
           <br />
           <Link to={"/register"} className='mt-6 '>
-            <h4 className='mt-3 font-serif text-center text-orange-500'>
+            <h4 className='mt-3 font-serif text-center text-blue-500'>
               Register Now!!
+            </h4>
+          </Link>
+          <Link to={"/"} className='mt-6 '>
+            <h4 className='mt-3 border-2 font-serif text-center text-blue-500'>
+              Return To Home Page
             </h4>
           </Link>
         </div>

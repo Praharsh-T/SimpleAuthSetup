@@ -23,6 +23,7 @@ function RegisterPage() {
         registrationData
       );
       console.log(response.data);
+      alert("REGISTRATION SUCCESSFULL");
     } catch (error) {
       console.log(error);
     }
@@ -39,7 +40,7 @@ function RegisterPage() {
         className='object-cover object-center h-screen w-7/12'
       />
       <div className='bg-white flex flex-col justify-center items-center w-5/12 shadow-lg'>
-        <h1 className='text-3xl font-bold text-orange-500 mb-2'>REGISTER</h1>
+        <h1 className='text-3xl font-bold text-blue-500 mb-2'>REGISTER</h1>
         <div className='w-1/2 text-center'>
           <form onSubmit={handleRegistrationSubmit}>
             <input
@@ -48,7 +49,7 @@ function RegisterPage() {
               placeholder='username'
               value={registrationData.username}
               onChange={handleRegistrationChange}
-              className='shadow-md border w-full h-10 px-3 py-2 text-orange-500 focus:outline-none focus:border-orange-500 mb-3 rounded'
+              className='shadow-md border w-full h-10 px-3 py-2 text-blue-500 focus:outline-none focus:border-blue-500 mb-3 rounded'
             />
             <input
               type='password'
@@ -56,16 +57,21 @@ function RegisterPage() {
               placeholder='password'
               value={registrationData.password}
               onChange={handleRegistrationChange}
-              className='shadow-md border w-full h-10 px-3 py-2 text-orange-500 focus:outline-none focus:border-orange-500 mb-3 rounded'
+              className='shadow-md border w-full h-10 px-3 py-2 text-blue-500 focus:outline-none focus:border-blue-500 mb-3 rounded'
             />
             <button
               type='submit'
-              className='bg-orange-500 hover:bg-orange-600 text-white px-3 py-1 rounded text-lg focus:outline-none shadow'>
+              className='bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-lg focus:outline-none shadow'>
               Register
             </button>
             <Link to={"/login"} className='mt-6 '>
-              <h4 className='mt-3 font-serif text-center text-orange-500'>
+              <h4 className='mt-3 font-serif text-center text-blue-500'>
                 Login Now!!
+              </h4>
+            </Link>
+            <Link to={"/"} className='mt-6 '>
+              <h4 className='mt-3 border-2 font-serif text-center text-blue-500'>
+                Return To Home Page
               </h4>
             </Link>
           </form>
