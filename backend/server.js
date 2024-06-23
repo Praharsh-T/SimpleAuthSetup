@@ -2,12 +2,13 @@ const express = require("express");
 const app = express();
 const port = 5000;
 const connectDb = require("./db/dbConnect");
-const user = require("./db/user");
 const User = require("./db/user");
+const cors = require("cors");
 connectDb();
 
 // middleware
 app.use(express.json());
+app.use(cors());
 
 // regis
 app.post("/register", async (req, res) => {
